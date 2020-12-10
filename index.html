@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Practica 4</title>
+
+		<!-- JAVASCRIPT SCRIPTS -->
+
+		<script src="jquery.min.js"></script>
+		<script src="index.js"></script>
+
+		<!-- CSS STYLE -->
+
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+
+	<body>
+
+		<div id="contenedor">
+
+			<header>
+
+				<ul>
+					<li><a class="active" href="#home">Inicio</a></li>
+					<li><a href="#news">Noticias</a></li>
+					<li><a href="#contact">Contacto</a></li>
+					<li><a href="#about">Acerca</a></li>
+				</ul>
+				
+			</header>
+
+			<h1>Sistema para obtener el numero verificador de la cedula Dominicana <br> y confirmar si es valida</h1>
+
+			<div class="contenedorFormulario">
+
+				<form>
+
+					<label for="cedulaInput"><h3>Ingrese su cedula completa o solo los 10 primeros digitos</h3></label>
+					<input id="cedulaInput" name="cedulaInput" placeholder="001-0000000-0" onfocus="this.placeholder = ''"
+					onblur="this.placeholder = '001-0000000-0'" type="number" oninput="if(value.length>11)value=value.slice(0,11);">
+					<br><input type="submit" onclick="algoritmoBase10();return false;" value="Calcular" class="buttonStyle1">
+					
+				</form>
+
+			</div>
+
+			<div id="resultContainer" class="contenedorFormulario">
+
+			<h3 id="resultado"></h3>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
